@@ -1,9 +1,11 @@
-<section class="cart-show">
+
+
+  <section class="cart-show">
 
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+<% if enhanced_cart.length > 0 %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -50,3 +52,11 @@
   </div>
 
 </section>
+
+<% else %>
+
+<div class="alert alert-danger" role="alert">
+  This is a danger alert with <a href="http://localhost:3000/" class="alert-link">Homepage</a>. Give it a click if you like.
+</div>
+
+<% end %>
